@@ -1,0 +1,66 @@
+.nds {
+	box-sizing: border-box;
+	& *, & *:before, & *:after {
+		box-sizing: inherit;
+	}
+}
+
+.nds__search {
+	display: flex;
+	height: 30px;
+}
+
+.nds__search-input {
+	margin-right: .5em;
+	line-height: 1.75;
+	width: 20em;
+}
+
+.nds__options-title {
+	display: inline-block;
+}
+.nds__select-all {
+	margin: 0 1em;
+	vertical-align: text-bottom;
+}
+
+.nds__options {
+	column-width: 12em;
+}
+
+.nds__option {
+	display: inline-block;
+	margin: 0 1em 1em 0;
+	padding: 4px 0 0 2.25em;
+	input {
+		margin-left: -2.25em;
+	}
+}
+@media (min-width: 800px) {
+	.nds__option {
+		padding-left: 1.6em;
+		input {
+			margin-left: -1.6em;
+		}
+	}
+}
+
+// Hack to force Select All down to next line w/out taking up full width
+.nds__option--select-all {
+	display: inline;
+}
+.nds__option--select-all:before {
+	content: "\A";
+	white-space: pre;
+}
+
+.nds__button {}
+
+.nds__results {}
+
+.nds__result {}
+
+.nds__attribution {
+	border-top: 1px solid #E0E0E0;
+	margin-top: 2em;
+}
